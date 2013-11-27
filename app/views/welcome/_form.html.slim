@@ -1,0 +1,17 @@
+= form_tag(controller: 'welcome', action: 'generate', method: 'get') do
+
+  div
+    = label_tag :component_type, 'Project:&nbsp;'.html_safe
+    = select_tag :project, options_for_select(@projects), autofocus: true
+  br
+  br
+  div
+    = text_field_tag :fixversion, nil, class: 'form-control input-lg', placeholder: 'Jira fixVersion'
+  br
+  br
+    div
+    = text_area_tag :summary, nil, class: 'form-control input-lg', rows: 10, placeholder: 'Summary of Sprint'
+    p class='small' * this section supports <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>
+  br
+  div
+    = submit_tag 'Generate', class: 'btn btn-lg btn-primary btn-block'

@@ -1,0 +1,16 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.0.0'
+gem 'sqlite3'
+gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 3.0.1.0.rc'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.2'
+group :doc do
+  gem 'sdoc', require: false
+end
+gem 'httpclient'
+gem 'jira-ruby', :require => 'jira'
+gem 'slim'
+gem 'redcarpet'
