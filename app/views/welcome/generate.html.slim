@@ -1,5 +1,6 @@
-h3 #{@fixversion} Summary:
-= markdown(@summary).html_safe
+- if @summary != ''
+  h3 #{@fixversion} Summary:
+  = markdown(@summary).html_safe
 br
 br
 h3 #{@fixversion} Release Notes:
