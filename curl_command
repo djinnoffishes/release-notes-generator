@@ -1,0 +1,1 @@
+curl -D- -u sge.mitch.yarchin:wabbitsnot1 -X GET -H "Content-Type: application/json" http://jira.sleepygiant.com:8080/rest/api/2/search?jql=project%20%3D%20PLFM%20AND%20fixVersion%20%3D%20"1.0.1"%20ORDER%20BY%20status%20DESC
