@@ -15,9 +15,9 @@ table class='table'
       td
         = link_to i.key, 'http://jira.sleepygiant.com:8080/browse/' + i.key
       td
-        = i.summary
+        = i.summary ? i.summary : 'No summary'
       td
-        = i.fields["issuetype"]["name"]
+        = i.fields["issuetype"] ? i.fields["issuetype"]["name"] : 'None'
       td 
-        = i.fields["assignee"]["displayName"]
+        = i.fields["assignee"] ? i.fields["assignee"]["displayName"] : 'None'
     end
