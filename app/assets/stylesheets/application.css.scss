@@ -12,9 +12,19 @@
  *= require_tree .
  */
 
+body {
+  background-image: url('sg-logo.png');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
 .main {
   margin: 50px auto auto auto;
   max-width: 750px;
+}
+
+.botn {
+  max-width: 200px;
 }
 
 @import "bootstrap";

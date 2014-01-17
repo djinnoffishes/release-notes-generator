@@ -1,23 +1,30 @@
-- if @summary != ''
-  h3 #{@fixversion} Summary:
-  = markdown(@summary).html_safe
+- if @intnotes != ''
+  h3 Integration notes:
+  = markdown(@intnotes).html_safe
+- if @othernotes != ''
+  h3 Other important notes:
+  = markdown(@othernotes).html_safe
 br
 br
-h3 #{@fixversion} Release Notes:
+h3 #{@fixversion} Detailed List:
 table class='table'
   tr
     th ID
     th Summary
-    th Type
-    th Assignee
+    - if @incl_type
+      th Type
+    - if @incl_assignee
+      th Assignee
   - @client.Issue.jql("project = '#{@project}' AND fixVersion = '#{@fixversion}'").each do |i|
     tr
       td
         = link_to i.key, 'http://jira.sleepygiant.com:8080/browse/' + i.key
       td
         = i.summary ? i.summary : 'No summary'
-      td
-        = i.fields["issuetype"] ? i.fields["issuetype"]["name"] : 'None'
-      td 
-        = i.fields["assignee"] ? i.fields["assignee"]["displayName"] : 'None'
+      - if @incl_type
+        td
+          = i.fields["issuetype"] ? i.fields["issuetype"]["name"] : 'None'
+      - if @incl_assignee
+        td 
+          = i.fields["assignee"] ? i.fields["assignee"]["displayName"] : 'None'
     end

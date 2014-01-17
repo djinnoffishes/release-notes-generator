@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate
 
   rescue_from JIRA::HTTPError do
-    flash[:error] = "Something's not right; probably that fixVersion doesn't exist."
+    flash[:error] = "Something's not right; probably that fixVersion doesn't exist. Try a different one."
     redirect_to root_path
   end
 

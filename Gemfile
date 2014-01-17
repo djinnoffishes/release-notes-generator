@@ -10,6 +10,7 @@ gem 'bootstrap-sass', '~> 3.0.1.0.rc'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem "github_api"
 group :doc do
   gem 'sdoc', require: false
 end
