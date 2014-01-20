@@ -13,7 +13,8 @@
   br
 
   div
-    = text_area_tag :intnotes, nil, class: 'form-control input-lg', rows: 5, placeholder: 'Notes for integration partners (optional)'
+    a< href='#' class='populate' Click here to populate this field with the latest Platform integration notes
+    = text_area_tag :intnotes, nil, class: 'form-control input-lg populator', rows: 5, placeholder: 'Notes for integration partners (optional)'
     p class='small' * Supports <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>
   br
 
@@ -25,7 +26,6 @@
   label class='category-select'
     = check_box_tag :incl_type, 'true', checked = true
     '&nbsp;Include Issue Type
-  
   br
 
   label class='category-select'

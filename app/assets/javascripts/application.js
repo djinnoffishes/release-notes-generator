@@ -15,3 +15,11 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+$(document).on('page:load ready',function() {
+  $('.populate').click(function() {
+    $('.populator').val('= @platform_notes');
+    return false;
+  });
+});

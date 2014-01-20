@@ -1,8 +1,10 @@
 class WelcomeController < ApplicationController
   include JiraQuery
+  include GithubApi
 
   def index
     @projects = CLIENT.Project.all.collect(&:key)
+    @platform_notes = PLATFORM_NOTES
   end
   
   def generate
