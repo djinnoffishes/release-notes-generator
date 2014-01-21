@@ -18,8 +18,9 @@
 
 
 $(document).on('page:load ready',function() {
+  var notes = $('.hidden_field').val();
   $('.populate').click(function() {
-    $('.populator').val('= @platform_notes');
+    $('.populator').val(notes);
     return false;
   });
 });

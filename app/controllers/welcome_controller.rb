@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
-  include JiraQuery
-  include GithubApi
+  include JiraQuery, GithubApi
 
   def index
     @projects = CLIENT.Project.all.collect(&:key)
@@ -9,7 +8,6 @@ class WelcomeController < ApplicationController
   
   def generate
     @intnotes = params[:intnotes]
-    @othernotes = params[:othernotes]
     @client = CLIENT
     @project = params[:project]
     @fixversion = params[:fixversion]
