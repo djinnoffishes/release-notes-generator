@@ -15,7 +15,7 @@ module GithubApi
       c.repo                = rpo
     end
     r = request.repos.contents.get path: 'RELEASE.md', ref: 'develop'
-    PLATFORM_NOTES << "### #{rpo} -" + Base64.decode64(r[:content]).extract_string("##","##") + "\n"
+    PLATFORM_NOTES << "#### #{rpo} -" + Base64.decode64(r[:content]).extract_string("##","##") + "\n"
   end
 
 end
