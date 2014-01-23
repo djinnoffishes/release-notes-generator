@@ -1,9 +1,9 @@
 # Jira info
-jira_username:  
-jira_password:  
-jira_site:      
+JIRA_USERNAME:  
+JIRA_PASSWORD:  
+JIRA_SITE:      
 
 # Github creds
-github_api_key: 
-repositories:   # must be a string, comma separated. example: "repo1, repo2, repo3" (include the quotes)
-user:           
+GITHUB_API_KEY: 
+REPOSITORIES:   # must be a string, comma separated. example: "repo1, repo2, repo3" (include the quotes)
+USER:           
