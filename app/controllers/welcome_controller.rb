@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
 
   def index
     @projects = CLIENT.Project.all.collect(&:key)
-    @platform_notes = PLATFORM_NOTES
+    @platform_notes = NOTES
   end
   
   def generate

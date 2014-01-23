@@ -1,4 +1,9 @@
-JIRA_USERNAME:
-JIRA_PASSWORD:
+# Jira info
+jira_username:  
+jira_password:  
+jira_site:      
 
-GITHUB_API_KEY: 
+# Github creds
+github_api_key: 
+repositories:   
+user:           

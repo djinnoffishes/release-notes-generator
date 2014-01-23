@@ -1,28 +1,17 @@
-== README
+== RN app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple website tool to help web producers generate meaningful release notes about their product. It queries both Jira fixversions and Github repositories for information about a given web build, then aggregates the data into a simple format that can  be easily copy + pasted to Gmail or any other email client.
 
-Things you may want to cover:
+Requirements:
+- Jira, using fixversion field to label release candidates / sprint contents
+- Github repository(ies)
+- Each repository must have a RELEASE.md file, documenting major version changes with h2 markup tags. Example:
+```
+## Version 1.4.0 [1/1/2014]
+- Fixed a lot of bugs
+- Did other stuff, too
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Steps to set up:
+1. git clone
+2. update your application.yml with the correct jira and github info
