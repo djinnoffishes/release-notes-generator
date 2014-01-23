@@ -11,7 +11,8 @@ class WelcomeController < ApplicationController
     @client = CLIENT
     @project = params[:project]
     @fixversion = params[:fixversion]
-    @incl_type = true if params[:incl_type]
-    @incl_assignee = true if params[:incl_type]
+    if params[:incl_type]
+      @incl_type, @incl_assignee = true, true
+    end
   end
 end

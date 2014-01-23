@@ -5,5 +5,5 @@ jira_site:
 
 # Github creds
 github_api_key: 
-repositories:   
+repositories:   # must be a string, comma separated. example: "repo1, repo2, repo3" (include the quotes)
 user:           
