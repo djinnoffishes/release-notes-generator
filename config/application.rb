@@ -5,11 +5,18 @@ require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "sprockets/railtie"
+require "yaml"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
+
+env_path = File.expand_path("../application.yml", __FILE__)
+if File.exist?(env_path)
+  env = YAML.load_file(env_path)
+  env.each{|k,v| ENV[k] = v }
+end
 
 module Releasenotes
   class Application < Rails::Application

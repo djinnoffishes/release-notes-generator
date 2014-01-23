@@ -6,9 +6,9 @@ module JiraQuery
   # password = Base64.encode64("wabbitsnot1").strip
 
   options = {
-              :username => APP_CONFIG['jira_username'],
-              :password => APP_CONFIG['jira_password'],
-              :site     => APP_CONFIG['jira_site'],
+              :username => ENV['jira_username'],
+              :password => ENV['jira_password'],
+              :site     => ENV['jira_site'],
               :context_path => '',
               :auth_type => :basic,
               :use_ssl => false
