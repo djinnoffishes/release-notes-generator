@@ -6,11 +6,10 @@ Requirements:
 - Jira, using fixversion field to label release candidates / sprint contents
 - Github repository(ies)
 - Each repository must have a RELEASE.md file, documenting major version changes with h2 markup tags. Example:
-```
-## Version 1.4.0 [1/1/2014]
-- Fixed a lot of bugs
-- Did other stuff, too
-```
+
+    ## Version 1.4.0 [1/1/2014]
+    - Fixed a lot of bugs
+    - Did other stuff, too
 
 Steps to set up:
 1. git clone
