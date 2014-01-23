@@ -1,6 +1,6 @@
 == RN app
 
-This is a simple website that can help web producers generate meaningful release notes. It queries both Jira fixversions and Github repositories for information about a given web build, then aggregates the data into a simple format that can  be easily copy + pasted to Gmail or any other email client.
+This is a simple web tool to help web producers generate meaningful release notes. It queries both Jira fixversions and Github repositories for information about a given web build, then aggregates the data into a simple format that can  be easily copy + pasted to Gmail or any other email client.
 
 Requirements:
 - Jira, using fixversion field to label release candidates / sprint contents
