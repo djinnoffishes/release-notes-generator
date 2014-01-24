@@ -22,3 +22,4 @@ group :production do
   gem 'pg'
 end
 gem 'faraday', '~> 0.8.8'
+gem 'heroku'
