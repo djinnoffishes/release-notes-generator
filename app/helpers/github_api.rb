@@ -11,6 +11,6 @@ module GithubApi
     end
     r = request.repos.contents.get path: 'RELEASE.md', ref: 'develop'
     NOTES << "##### #{rpo} -" + Base64.decode64(r[:content]).extract_string("##","##") + "\n"
-  end
+  end if ENV['REPOSITORIES']
 
 end
